@@ -1,14 +1,14 @@
-import request from 'request';
+import axios from "axios"
 
-export function getWeather(city: string) {
-  request.get({
-    url: 'https://api.api-ninjas.com/v1/weather?city=' + city,
+export function getWeather(city: string): void {
+  const url = `https://api.api-ninjas.com/v1/weather?city=${city}`
+  axios.get(url, {
     headers: {
       'X-Api-Key': '7utyQFW3vlf0UMOaSzL1fQ==T552j4B9VArP1QLN'
-    },
-  }, function(error, response, body) {
-    if(error) return console.error('Request failed:', error);
-    else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-    else console.log(body)
-  });
+    }
+  }).then(response => {
+    console.log(response.data)
+  }).catch(error => {
+    console.log(error)
+  })
 }

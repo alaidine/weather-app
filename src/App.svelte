@@ -1,6 +1,6 @@
 <script lang="ts">
   let city: any
-  import { getWeather } from './get_weather'
+  import { getWeather } from "./get_weather"
 </script>
 
 <main>
