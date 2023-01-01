@@ -1,1 +1,0 @@
-/home/alaidine/Dev/ts/weather-app/pages/api/get_weather/target/debug/get_weather: /home/alaidine/Dev/ts/weather-app/pages/api/get_weather/src/lib.rs /home/alaidine/Dev/ts/weather-app/pages/api/get_weather/src/main.rs
