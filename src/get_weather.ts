@@ -1,15 +1,9 @@
 import axios from "axios"
 
-interface Weather {
-  temperature: number;
-  windSpeed: number;
-  humidity: number;
-}
-
-export function getWeather(city: string) {
+export async function getWeather(city: string): Promise<any> {
   const url = `https://api.api-ninjas.com/v1/weather?city=${city}`
 
-  const res = axios.get(url, { headers: { 'X-Api-Key': '7utyQFW3vlf0UMOaSzL1fQ==T552j4B9VArP1QLN' } })
+  const res = await axios.get(url, { headers: { 'X-Api-Key': '7utyQFW3vlf0UMOaSzL1fQ==T552j4B9VArP1QLN' } })
   .then(response => {
     return response.data
   })
@@ -17,5 +11,5 @@ export function getWeather(city: string) {
     console.log(error)
   })
 
-  console.log(res)
+  return res
 }
