@@ -15,7 +15,9 @@
           <input bind:value={city} placeholder="write the name of a city...">
         </label>
       </form>
-      <button on:click={() => getWeather(city)}>get weather</button>
+      <button on:click={() => {
+        getWeather(city)
+      }}>get weather</button>
     </div>
   </div>
 </main>
